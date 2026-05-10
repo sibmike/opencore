@@ -183,7 +183,7 @@ Probably not alone. OpenCore is built for solo and small-team workflows where on
 
 ## License
 
-MIT. Use it commercially. Fork it. Ship it.
+Proprietary. Use it commercially. Fork it. Ship it.
 
 ## Contribute
 
