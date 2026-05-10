@@ -1,0 +1,128 @@
+# Delta Batch <NNN>
+
+**Date:** <YYYY-MM-DD>
+**Dreams covered:** <first-filename> through <last-filename> (<count> total)
+**Previous batch:** <delta-batch-NNN-1.md or "none" if first>
+**Project:** <project-name>
+
+<!-- Replace every <placeholder> with concrete content. Sections with zero items still get the heading + a one-line "No items in this batch." note — never delete a heading. -->
+
+---
+
+## Aggregate
+
+**Recurring deltas (frequency map):**
+
+| Delta theme | Dreams citing it | Source dreams |
+|-------------|------------------|---------------|
+| <theme> | <count> | <dream-YYYY-MM-DD>, <dream-YYYY-MM-DD>, ... |
+| <theme> | <count> | <dream-YYYY-MM-DD>, ... |
+
+**Recurring core-practice drifts:**
+
+| Practice file | Drift type | Dreams citing it |
+|---------------|-----------|------------------|
+| docs/core-practices/<file> | <drift summary> | <count> |
+
+**Recurring user patterns:**
+
+| Pattern | Dreams citing it |
+|---------|------------------|
+| <pattern> | <count> |
+
+---
+
+## Filter
+
+| Item | Frequency | Confidence | Disposition |
+|------|-----------|-----------|-------------|
+| <item> | <N times> | high / medium / low | strong candidate / candidate / hold / contested |
+
+Apply the thresholds from [`docs/core-practices/evolution/delta-extraction.md`](../evolution/delta-extraction.md):
+
+- 2+ independent dreams → strong candidate (ships in this batch)
+- 1 dream + matching ERRATA → candidate (ships if reasoning aligns)
+- 1 dream, no ERRATA → hold (carries to next batch's Inputs)
+- contradictory → contested (preserved, not picked)
+
+---
+
+## Produce
+
+### 1. PROJECT PR bundle
+
+<!-- One bundled diff per file. If multiple PRs target the same file, combine. -->
+
+```
+FILE: <path>
+ACTION: add | edit | delete
+CHANGE: <specific diff>
+SOURCE DREAMS: <dream-YYYY-MM-DD>, <dream-YYYY-MM-DD>
+REASONING: <why — cite the convergent observation>
+```
+
+```
+FILE: <path>
+ACTION: <...>
+CHANGE: <...>
+SOURCE DREAMS: <...>
+REASONING: <...>
+```
+
+### 2. Core-practice drift summary
+
+<!-- Aggregated drift, even if no upstream CORE PR is being drafted in this batch. The divergence review (separate cadence) consumes this section. -->
+
+| Forked file | Drift | Convergent dreams | Promote-to-CORE candidate? |
+|-------------|-------|-------------------|---------------------------|
+| docs/core-practices/<file> | <one-line drift> | <count> | yes / no / contested |
+
+### 3. USER PR bundle
+
+<!-- All user-preference proposals collapsed into a single PR for the human. -->
+
+```
+PROPOSED ADDITIONS to ~/.claude/user-preferences.md:
+
+PREFERENCE: <observation>
+EVIDENCE: <dream refs>
+LINE: <exact line to add>
+
+PREFERENCE: <observation>
+EVIDENCE: <dream refs>
+LINE: <exact line to add>
+```
+
+### 4. ERRATA entries
+
+<!-- New ERR-NNN IDs assigned sequentially. Do not skip numbers; do not reuse retired numbers. -->
+
+```
+ERR-<NNN>: <title>
+SEVERITY: high | medium | low
+WHAT: <one paragraph>
+ROOT CAUSE: <one sentence>
+LESSON: <one sentence, generalized>
+SOURCE DREAMS: <dream refs>
+```
+
+### 5. Contested items
+
+<!-- Items where two dreams reached opposite conclusions. Preserve both views. Human decides; this batch does not. -->
+
+| Item | View A | View B | Source dreams |
+|------|--------|--------|---------------|
+| <item> | <position A> | <position B> | <dreams citing each> |
+
+### 6. Deferred items
+
+<!-- Items held for next batch because evidence was thin. Carry forward in next batch's Inputs. -->
+
+| Item | Reason held | First seen in batch | Drop after batch |
+|------|-------------|---------------------|------------------|
+| <item> | <single-source / low-confidence / contradicts existing rule> | <NNN> | <NNN+3> |
+
+---
+
+<!-- Template source: docs/core-practices/templates/delta-report.md.template -->
+<!-- Prompt source: docs/core-practices/evolution/delta-extraction.md -->

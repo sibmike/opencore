@@ -1,0 +1,52 @@
+# ERRATA
+
+Severe mistakes already paid for. Read this before any session involving operations that have failed before.
+
+> **Inherited from CORE:** [errata-protocol](docs/core-practices/documentation/doc-maintenance.md) — see for entry criteria, severity definitions, format.
+
+---
+
+## Active entries
+
+### ERR-<NNN>: <short title>
+
+- **Date:** <YYYY-MM-DD>
+- **Severity:** <CRITICAL | HIGH | MEDIUM | LOW>
+- **What happened:** <one paragraph: concrete sequence of events, what was attempted, what failed>
+- **Impact:** <what broke, how long, who saw it>
+- **Root cause:** <one sentence: the actual underlying cause, not the surface symptom>
+- **Generalized lesson candidate:** <one sentence in anti-pattern phrasing — this is the CORE-promotion hint field. If the same lesson surfaces in another project, it earns a CORE PR.>
+- **Rules to prevent recurrence:**
+  1. <specific check or behavior>
+  2. <specific check or behavior>
+  3. <specific check or behavior>
+
+---
+
+### ERR-<NNN+1>: <short title>
+
+- **Date:** <YYYY-MM-DD>
+- **Severity:** <CRITICAL | HIGH | MEDIUM | LOW>
+- **What happened:** <one paragraph>
+- **Impact:** <one paragraph>
+- **Root cause:** <one sentence>
+- **Generalized lesson candidate:** <one sentence>
+- **Rules to prevent recurrence:**
+  1. <rule>
+  2. <rule>
+
+---
+
+## Retired entries
+
+<!-- Move entries here when the failure mode is verifiably impossible (system change removed it). Do NOT delete; lineage matters. Strike-through the title and add a one-line note explaining what changed. -->
+
+### ~~ERR-<NNN>: <retired title>~~
+
+- **Retired:** <YYYY-MM-DD>
+- **Reason:** <what system change removed the failure mode>
+
+---
+
+<!-- Template source: docs/core-practices/templates/project-scaffold/ERRATA.md.template -->
+<!-- ID assignment: NNN is sequential, never reused, never skipped. The next available NNN is owned by the next delta extraction batch. -->

@@ -1,0 +1,47 @@
+PROPRIETARY LICENSE — ALL RIGHTS RESERVED
+
+Copyright (c) 2026 Mikhail L Arbuzov
+
+This repository and all files within it (the "Work") are proprietary
+and confidential to Mikhail L Arbuzov (the "Author").
+
+NO LICENSE IS GRANTED. Public visibility of this repository on GitHub
+or any other platform does NOT confer any right, permission, or implied
+license to use the Work for any purpose.
+
+Without prior written consent from the Author, you MAY NOT:
+
+  1. Use the Work, in whole or in part, in any project, product, service,
+     or system, whether commercial or non-commercial, internal or public.
+  2. Copy, reproduce, redistribute, mirror, repost, or republish the
+     Work or any portion of it.
+  3. Modify, adapt, translate, or create derivative works based on the
+     Work.
+  4. Extract concepts, structure, methodology, vocabulary, or rules from
+     the Work for use in any other project, framework, prompt, agent,
+     specification, or system.
+  5. Train, fine-tune, embed, retrieve-augment, or otherwise ingest the
+     Work or any portion of it into any machine-learning model, agent
+     framework, vector store, or similar system, whether for research,
+     evaluation, or production use.
+  6. Reverse-engineer, decompile, or otherwise attempt to derive the
+     underlying methodology of the Work for application elsewhere.
+  7. Sublicense, sell, rent, lease, or otherwise transfer rights in the
+     Work to any third party.
+
+Viewing the Work through a web browser or via `git clone` for personal
+reading is permitted. Any use beyond personal reading — including any
+use described in clauses 1 through 7 above — requires explicit, prior,
+written permission from the Author obtained through the contact address
+listed on the Author's GitHub profile.
+
+THE WORK IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, ACCURACY, AND NONINFRINGEMENT. IN NO
+EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING
+FROM, OUT OF, OR IN CONNECTION WITH THE WORK OR THE USE OR OTHER DEALINGS
+IN THE WORK.
+
+For licensing inquiries, contact Mikhail L Arbuzov via the contact
+information published on the GitHub account hosting this repository.

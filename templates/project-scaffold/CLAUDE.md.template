@@ -1,0 +1,95 @@
+# CLAUDE.md — Agent Entry Point
+
+This file is loaded into every session. It is the index to the project's knowledge base — not the knowledge base itself.
+
+---
+
+## Session Start (MANDATORY — read on EVERY new session)
+
+Before doing any work, read these in order:
+
+0. [docs/core-practices/CORE.md](docs/core-practices/CORE.md) — forked engineering practices (inherited from CORE <vX.Y.Z>; project may have drifted)
+1. <project-doc-1> — <one-line description>
+2. <project-doc-2> — <one-line description>
+3. <project-doc-3> — <one-line description>
+4. <ERRATA.md> — mistakes to never repeat
+5. Auto-memory MEMORY.md (`<machine-specific path>`) — machine-specific pitfalls
+6. If resuming work: read active execution plans in `<docs/exec-plans/active/>`
+
+---
+
+## The Commandments
+
+### 1. Read behavior-defining files at session start
+
+All files listed in Session Start MUST be read before any work begins. Use the Documentation Map below to find domain-specific docs as needed during the session.
+
+### 2. Git commit discipline
+
+> **Inherited from CORE:** [git-workflow](docs/core-practices/practices/git-workflow.md). Project-specific additions below.
+
+<project-specific git rules: branch names, merge cadence, hotfix policy>
+
+### 3. Documentation trail for features
+
+> **Inherited from CORE:** [feature-lifecycle](docs/core-practices/practices/feature-lifecycle.md). Project-specific additions below.
+
+<project-specific doc artifacts: spec format, design-doc location, exec-plan template>
+
+### 4. Infrastructure changes require plan-mode approval
+
+> **Inherited from CORE:** [infra-management](docs/core-practices/practices/infra-management.md). Project-specific additions below.
+
+<project-specific resources in scope: list every infrastructure type that triggers plan-mode>
+
+### 5. Session End: Dream
+
+> **Inherited from CORE:** [evolution/dreaming](docs/core-practices/evolution/dreaming.md).
+
+After the post-deploy checklist's Net Infra Footprint Check passes, run the dream prompt at `docs/core-practices/evolution/dreaming.md` and write the dream to `docs/dreams/dream-<YYYY-MM-DD>.md` using the template at `docs/core-practices/templates/dream-report.md.template`. Debug-only sessions still get a dream.
+
+---
+
+## Project Overview
+
+**<Project name>** — <one-paragraph description of what the project does, who uses it, key technology stack>.
+
+## Current Build Status
+
+| Layer | Files | Tests | Coverage | Status |
+|-------|-------|-------|----------|--------|
+| **<Layer>** | <count> | <count passing> | <%> | <status notes> |
+| **<Layer>** | <count> | <count passing> | <%> | <status notes> |
+
+## Milestones
+
+- **M1:** <name> — <status>
+- **M2:** <name> — <status>
+
+## Environment & Commands
+
+See `<docs/dev-environment.md>` for paths, commands, and known pitfalls.
+
+## Conventions (summary)
+
+<2-4 bullets pointing at docs/conventions.md or equivalent>
+
+---
+
+## Documentation Map
+
+| Doc | Scope |
+|-----|-------|
+| [docs/core-practices/](docs/core-practices/) | **Forked engineering practices** — read CORE.md first; index of all practices/, documentation/, evolution/, templates/ |
+| [docs/dreams/](docs/dreams/) | Per-session dream reports |
+| [docs/deltas/](docs/deltas/) | Batch delta extractions (every 5 dreams or weekly) |
+| <project-doc> | <scope> |
+| <project-doc> | <scope> |
+
+---
+
+## ERRATA
+
+**CRITICAL:** Read `<ERRATA.md>` before any session involving <high-risk operations>. It documents severe mistakes that must never be repeated.
+
+<!-- Template source: docs/core-practices/templates/project-scaffold/CLAUDE.md.template -->

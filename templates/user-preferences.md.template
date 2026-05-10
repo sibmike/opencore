@@ -1,0 +1,49 @@
+# User Preferences (DRAFT — awaiting human review)
+
+<!--
+Auto-extracted by the dream process on <YYYY-MM-DD>.
+Review every line. Delete what's wrong. Edit what's close. Approve what's right.
+
+Confidence tags:
+- [HIGH]   = drawn from explicit user statement or environment fact (machine paths, named tools, exact commands)
+- [MEDIUM] = inferred from observed pattern (recurring choice, repeated workflow). Verify before keeping.
+
+Promote this file to ~/.claude/user-preferences.md only after triaging every [MEDIUM] line.
+-->
+
+---
+
+## Environment
+
+<!-- Machine paths, OS, shell, key directories. Mostly [HIGH] entries. -->
+
+- [HIGH] <fact>
+- [HIGH] <fact>
+- [MEDIUM] <inference>
+
+## Workflow
+
+<!-- Tools, recurring commands, branch patterns, plan-file conventions, memory locations. -->
+
+- [HIGH] <fact>
+- [MEDIUM] <inference>
+- [MEDIUM] <inference>
+
+## Communication
+
+<!-- Output style: brevity expectations, level of detail, format preferences (bullets vs prose), summarize vs show details, code-comment habits. -->
+
+- [HIGH] <fact>
+- [MEDIUM] <inference>
+
+## Project-independent
+
+<!-- Patterns that follow the human across every project — not tied to any one codebase. -->
+
+- [HIGH] <fact>
+- [MEDIUM] <inference>
+
+---
+
+<!-- Template source: docs/core-practices/templates/user-preferences.md.template -->
+<!-- Prompt source: docs/core-practices/evolution/dreaming.md (Phase 4 USER PR section) -->

@@ -1,0 +1,15 @@
+# OS metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor swap / backup files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Local-only notes (not part of canonical CORE/STACK content)
+NOTES.local.md
+TODO.local.md

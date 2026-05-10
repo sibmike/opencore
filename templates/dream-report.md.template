@@ -1,0 +1,116 @@
+# Dream <YYYY-MM-DD>[-N]
+
+**Session start:** <HH:MM, timezone>
+**Session end:** <HH:MM, timezone>
+**Project:** <project-name>
+**Inherited CORE version:** <vX.Y.Z>
+
+<!-- Replace every <placeholder> below with concrete content. Delete sections that genuinely do not apply (e.g. Phase 4 USER PR if no user-preference signal surfaced), but never leave a phase entirely empty without a one-line note explaining why. -->
+
+---
+
+## Phase 1: Delta
+
+**Goal.** <one sentence: what was the session trying to accomplish>
+
+**Plan.** <2-4 sentences: the approach as it stood at session start>
+
+**Reality.** <2-6 sentences: what actually happened, in order, with concrete events>
+
+**Delta.** <name each gap between plan and reality, with the WHY for each>
+
+- <gap 1>: <why>
+- <gap 2>: <why>
+- <gap N>: <why>
+
+---
+
+## Phase 2: Assumption Autopsy
+
+**Held.** <assumptions that turned out correct — list only those that materially shaped the work>
+
+- <assumption>: confirmed by <observation>
+- <assumption>: confirmed by <observation>
+
+**Broke.** <each broken assumption + what broke it>
+
+- <assumption>: broken by <event/observation>
+- <assumption>: broken by <event/observation>
+
+**New untested.** <assumptions introduced during the session that have not yet been verified>
+
+- <assumption>: would be verified by <test/observation>
+- <assumption>: would be verified by <test/observation>
+
+---
+
+## Phase 3: Classify
+
+| Delta | Project-specific? | Core-practice drift? | User preference? |
+|-------|-------------------|---------------------|-----------------|
+| <gap 1> | <yes/no + one-sentence reasoning> | <yes/no + which practice file in docs/core-practices/> | <yes/no> |
+| <gap 2> | <yes/no + reasoning> | <yes/no + file> | <yes/no> |
+| <gap N> | <yes/no + reasoning> | <yes/no + file> | <yes/no> |
+
+---
+
+## Phase 4: Stage PRs
+
+<!-- Every PR below is a proposal. Do NOT apply changes here. -->
+
+### PROJECT PR
+
+```
+FILE: <path>
+ACTION: add | edit | delete
+CHANGE: <specific diff or before/after>
+REASONING: <why>
+```
+
+```
+FILE: <path>
+ACTION: add | edit | delete
+CHANGE: <specific diff>
+REASONING: <why>
+```
+
+### CORE PRACTICE DRIFT
+
+```
+FILE: docs/core-practices/<file>
+INHERITED: <what CORE said, verbatim or close paraphrase>
+PROPOSED: <what project reality demands, verbatim>
+REASONING: <what encounter revealed this — cite the gap from Phase 1>
+```
+
+### ERRATA
+
+```
+ERR-NNN: <title>
+SEVERITY: high | medium | low
+WHAT: <one paragraph>
+ROOT CAUSE: <one sentence>
+LESSON: <one sentence, generalized — anti-pattern phrasing>
+```
+
+### USER PR
+
+```
+PREFERENCE: <what was observed>
+EVIDENCE: <which session behaviors suggest this — at least 2>
+PROPOSED ADDITION: <specific line to add to ~/.claude/user-preferences.md>
+```
+
+---
+
+## Phase 5: Meta
+
+- **Debugging protocol followed?** <yes/no + where it deviated, if anywhere>
+- **Shotgun debugging?** <yes/no + which moments>
+- **Core practice violated?** <yes/no + which one + whether the practice should change or the human should follow it better>
+- **Documentation debt:** <increased | decreased | stable> + <one sentence on what shifted>
+
+---
+
+<!-- Template source: docs/core-practices/templates/dream-report.md.template -->
+<!-- Prompt source: docs/core-practices/evolution/dreaming.md -->

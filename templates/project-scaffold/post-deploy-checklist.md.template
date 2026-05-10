@@ -1,0 +1,102 @@
+# Post-Deploy / End-of-Session Checklist
+
+> **Inherited from CORE:** [checklist-protocol](docs/core-practices/documentation/checklist-protocol.md) — structural rules. [evolution/checklist-maintenance](docs/core-practices/evolution/checklist-maintenance.md) — when to add/remove a check.
+
+Run this at the end of every session, including debug-only sessions. Skipping the Net Infra Footprint Check (§0) is a process violation regardless of session type.
+
+---
+
+## When to run each section
+
+| Event | Required sections |
+|-------|-------------------|
+| Full feature deploy | All sections |
+| Hotfix / targeted bug-fix deploy | §0 + §1 + §2 + §3 + §7 |
+| Debugging session with no deploy | §0 + §3 + §4 + §7 |
+| Infrastructure-only change | §0 + §1 + §3 + §7 |
+
+---
+
+## §0. Net Infra Footprint Check
+
+Count and document the session's infrastructure delta.
+
+- [ ] List every <infrastructure-resource-type> created, modified, or removed this session.
+- [ ] Confirm each net-positive change had plan-mode approval before it was applied. Flag violations explicitly.
+- [ ] Record the delta in the commit message.
+- [ ] Record the delta in the active execution plan.
+- [ ] Even when delta is zero, write `Net infra delta: zero` explicitly.
+
+---
+
+## §1. Infrastructure verification
+
+Confirm all resources exist in the deploy target.
+
+- [ ] <verification command for resource type 1> — confirm presence
+- [ ] <verification command for resource type 2> — confirm presence
+- [ ] <permission/role check> — confirm wired correctly
+- [ ] <env var or config check> — confirm value reaches the runtime
+
+---
+
+## §2. Production smoke test
+
+- [ ] Clear browser cache + service worker; hard refresh.
+- [ ] Health/liveness endpoint returns healthy.
+- [ ] Authentication flow completes with a test account.
+- [ ] Each major <route/page/screen> loads without runtime error.
+- [ ] Network requests in DevTools — no 5xx, no CORS errors.
+- [ ] Test with one account per <user-role>.
+- [ ] If an end-to-end suite exists, run it against the deploy target. Store results at `<artifact-location>/<YYYY-MM-DD>/`.
+
+---
+
+## §3. Documentation updates
+
+- [ ] Active execution plan reflects current state.
+- [ ] Affected specs and design docs updated.
+- [ ] Build status table in `<CLAUDE.md>` reflects new counts.
+- [ ] <project-specific doc 1> updated if scope hits its area.
+- [ ] <project-specific doc 2> updated if scope hits its area.
+
+---
+
+## §4. Error log
+
+Add an `ERR-NNN` entry to `<ERRATA.md>` if any of these occurred:
+
+- Three or more failed fix iterations on the same problem.
+- Misdiagnosis (root cause was not what was first hypothesized).
+- Production breakage (any duration).
+- Silent infra creep (resource shipped without plan-mode approval).
+
+Use the template in `docs/core-practices/templates/project-scaffold/ERRATA.md.template`.
+
+---
+
+## §5. Machine/environment pitfalls log
+
+- [ ] Add any new environment-specific gotchas to `<MEMORY-or-pitfalls-doc>`.
+
+---
+
+## §6. Quality grade refresh
+
+- [ ] If a milestone closed this session, update the quality-score table.
+- [ ] If a gap closed, strike through it in the functionality audit.
+
+---
+
+## §7. Session Reflection (Dream)
+
+> **Inherited from CORE:** [evolution/dreaming](docs/core-practices/evolution/dreaming.md).
+
+- [ ] Run the dream prompt at `docs/core-practices/evolution/dreaming.md`.
+- [ ] Write the dream to `docs/dreams/dream-<YYYY-MM-DD>[-N].md` using the template at `docs/core-practices/templates/dream-report.md.template`.
+- [ ] Confirm the dream names at least one concrete delta (or, if truly nothing diverged, says so explicitly).
+- [ ] If five new dreams now exist since the last delta extraction, run the delta extraction prompt at `docs/core-practices/evolution/delta-extraction.md` and write `docs/deltas/delta-batch-<NNN>.md`.
+
+---
+
+<!-- Template source: docs/core-practices/templates/project-scaffold/post-deploy-checklist.md.template -->
