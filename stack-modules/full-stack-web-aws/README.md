@@ -1,7 +1,7 @@
 # Stack: full-stack-web-aws
 
-**Status:** scaffold (empty — awaiting bootstrap extraction).
-**Version:** v0.0.0 (no content yet).
+**Status:** v0.1.0 (bootstrapped 2026-05-10 from a single source project).
+**Version:** v0.1.0. See [v0.1.0/STACK.md](v0.1.0/STACK.md) for the doc index and [v0.1.0/STACK-CHANGELOG.md](v0.1.0/STACK-CHANGELOG.md) for the lineage.
 
 ## Archetype definition
 

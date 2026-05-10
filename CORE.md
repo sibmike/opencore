@@ -30,7 +30,7 @@ Versioning: semver. Current version: 0.1.2.
 ## Stack Modules
 Per-archetype layers that sit between CORE and PROJECT, capturing wisdom common to projects of the same technical stack. See [stack-modules/README.md](stack-modules/README.md) for the 4-layer model and archetype concept.
 
-- [stack-modules/full-stack-web-aws/](stack-modules/full-stack-web-aws/) — Python or TypeScript backend + React/Next.js frontend + AWS services (scaffold; v0.0.0, awaiting bootstrap extraction).
+- [stack-modules/full-stack-web-aws/](stack-modules/full-stack-web-aws/) — Python or TypeScript backend + React/Next.js frontend + AWS services (v0.1.0, bootstrapped 2026-05-10).
 
 ## Templates
 - [dream-report.md.template](templates/dream-report.md.template) — Output skeleton for the dream prompt.
