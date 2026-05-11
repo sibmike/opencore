@@ -99,7 +99,7 @@ That is the entire setup.
 
 ## What is in it
 
-10 practices, lifted from real production codebases:
+The **CORE** layer ships 10 universal practices, lifted from real production codebases:
 
 | Practice | What it covers |
 |---|---|
@@ -122,9 +122,37 @@ Plus 3 documentation standards ([`documentation/`](documentation/)) and the evol
 | [`evolution/delta-extraction.md`](evolution/delta-extraction.md) | Batch-process dreams into proposed updates. |
 | [`evolution/core-update-gate.md`](evolution/core-update-gate.md) | The bar for promoting a lesson upstream. |
 
-**Plus a stack-specific warm start.** If you are building a full-stack web app on AWS, fork [`stack-modules/full-stack-web-aws/v0.1.0/`](stack-modules/full-stack-web-aws/v0.1.0/) alongside CORE. It ships ready-made practices for AWS deploy sequencing (App Runner / Lambda / Amplify), CORS and frontend-backend wiring, IAM ordering, Python venv + conda + npm interop, UI review checklists. Knowledge you would otherwise pay for in 6 months of production incidents. Other archetypes (CLI tools, data pipelines, mobile) get scaffolded as the community contributes them.
-
 Current version: **CORE v0.1.2**, **stack/full-stack-web-aws v0.1.0**. See [`CORE.md`](CORE.md) for the full index and [`CORE-CHANGELOG.md`](CORE-CHANGELOG.md) for lineage.
+
+---
+
+## Four layers, not one
+
+OpenCore is not one rulebook — it is a layered model. You fork what applies.
+
+```
+CORE     The slow-moving universal rulebook. Practices that govern HOW to work
+         regardless of stack — debugging, git, testing, session protocol,
+         anti-patterns. Never names a technology. (← this repo)
+
+STACK    Per-archetype wisdom. The first archetype, full-stack-web-aws v0.1.0,
+         ships AWS deploy sequencing (App Runner / Lambda / Amplify), CORS and
+         frontend-backend wiring, IAM ordering, Python venv + conda + npm
+         interop, UI review checklists. Skip months of paid-in-blood discovery.
+         Other archetypes (CLI tools, data pipelines, mobile) get scaffolded
+         as the community contributes them.
+
+PROJECT  Your codebase's fork of CORE + STACK, plus everything unique to this
+         repo — your data model, runbooks, ERRATA. Drifts as you ship. Your
+         drift IS a layer; it is not noise.
+
+USER     Your personal preferences. Lives in your tool's user-prefs file.
+         Follows you across projects, not the project across humans.
+```
+
+Knowledge flows **up** the stack only on evidence. Your project's drift becomes a CORE PR when the same lesson hits two projects independently (≥3 engineers from ≥2 projects approve). STACK promotes on a lower gate (≥2 engineers from ≥2 projects of the same archetype). Nothing auto-applies. Every layer is a PR.
+
+Each layer evolves at the right speed. CORE moves slowly because rules must hold universally. STACK moves faster because it only has to hold within an archetype. PROJECT moves at session speed because reality changes daily. USER is yours alone.
 
 ---
 
