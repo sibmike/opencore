@@ -1,11 +1,30 @@
 # OpenCore
 
-> The shareable engineering playbook your AI development actually needs.
-> Bigger than `CLAUDE.md`. Synced across every project and every teammate's AI. Evolves as you ship.
+> **Shared engineering memory for AI agents.**
+> Compounds across every project, every engineer, every session.
+> Your agents stop making the same mistakes twice.
+
+---
+
+## What it is
+
+You ship code fast — with Claude Code, Cursor, Windsurf, Copilot, sometimes all of them in the same repo. So does your cofounder. So does your new hire.
+
+Every agent has different prompts. Conventions drift. Architectural decisions clash. Best practices live in people's heads. New engineers and new agents repeat old mistakes.
+
+**You can generate code faster than you can preserve engineering discipline.**
+
+OpenCore is the fix: a shared, versioned, evolving playbook every agent in your repo reads. Fork it. Drop it in. Ship. When a lesson lands as an updated practice, every agent reads it next session — yours, your cofounder's, the new hire's.
 
 ---
 
 ## The problem
+
+### Multi-agent chaos compounds at AI speed
+
+Two devs ship to the same repo with AI assistance. Yours follows your user-guidelines. Theirs follows theirs. Your AI commits one convention; theirs commits the opposite. Tuesday's commit undoes Monday's. Wednesday's PR undoes Tuesday's. The repo never settles. It is a Greek tragedy with multiple AIs and many hands — and it scales with the number of agents in the room.
+
+The deeper pain: *how to work with AI* — when to plan, when to commit, when to ask, what to never let the agent touch — is tacit knowledge that lives in each senior dev's head. **It does not transfer to your junior.** Every AI-using dev reinvents AI-collaboration from scratch. When the senior leaves, the knowledge goes with them.
 
 ### Your dev playbook is glued to one project
 
@@ -32,12 +51,6 @@ client-work/       ──  CLAUDE.md  (copy-pasted from somewhere)
 
 Your startup playbook is dozens of files and dozens of lessons — and **none of it transfers**. It is glued to startup-specific tables, services, terms. You have no disciplined way to sync what worked there with what is happening here. Every new project starts fresh. Your practice never compounds.
 
-### And when you bring on a teammate, the AI chaos begins
-
-Now there are two AIs in the repo. Yours follows your user-guidelines. Theirs follows theirs. Your AI commits one convention; theirs commits the opposite. Tuesday's commit undoes Monday's. Wednesday's PR undoes Tuesday's. The repo never settles. It is a Greek tragedy with multiple AIs and many hands.
-
-And the deeper pain: *how to work with AI* — when to plan, when to commit, when to ask, what to never let the agent touch — is tacit knowledge that lives in each senior dev's head. **It does not transfer to your junior.** Every AI-using dev on the team is reinventing AI-collaboration from scratch. When the senior leaves, that knowledge goes with them.
-
 ## The fix
 
 One playbook. Forked once. Read by every repo. Evolves as you ship.
@@ -62,7 +75,7 @@ Project-specific things stay in the project. Universal practices live in the for
 
 ```bash
 # In any project:
-git clone https://github.com/<TBD>/opencore.git .opencore
+git clone https://github.com/sibmike/opencore.git .opencore
 echo "Read .opencore/CORE.md before doing anything." > CLAUDE.md
 ```
 
@@ -76,7 +89,9 @@ That is the entire setup.
 
 **Stop being afraid of your cofounder's AI.** Right now you do not want their agent anywhere near your codebase — it has no clue about your repo's rules and will mess things up. With OpenCore in the repo, their agent reads the same playbook yours does. The fear evaporates because the rules stop living in your head.
 
-**Code like a pro.** If you are a vibe coder, founder, or weekend hacker, this is the engineering playbook senior devs actually use — debugging, git discipline, testing, infra, security, planning. Fork it. Your AI agent reads it. You ship without the rookie mistakes.
+**Your agents stop making the same mistakes twice.** OpenCore is institutional memory the codebase keeps. When a lesson lands as an updated practice, every agent reads it next session — yours, your cofounder's, the new hire's. Regressions stop. Onboarding speeds up. Architectural drift slows because the rules are versioned, not improvised.
+
+**Code like a pro, even without a senior next door.** If you are shipping with AI but do not have a deep bench of senior engineers to lean on, this is the playbook senior devs actually use — debugging, git discipline, testing, infra, security, planning. Fork it. Your AI agent reads it. You ship without the rookie mistakes.
 
 **Make your seniority compound.** If you are already a senior engineer, this is how you align your coding agent to your preferences in a durable way. Codify what you know once. Sync across every repo. Stop re-teaching your agent from scratch every project.
 
@@ -183,7 +198,7 @@ Probably not alone. OpenCore is built for solo and small-team workflows where on
 
 ## License
 
-Proprietary. Use it commercially. Fork it. Ship it.
+MIT. Use it commercially. Fork it. Ship it.
 
 ## Contribute
 
