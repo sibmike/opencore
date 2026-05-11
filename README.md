@@ -99,7 +99,7 @@ That is the entire setup.
 
 ## What is in it
 
-10 practices, lifted from real production codebases:
+The **CORE** layer ships 10 universal practices, lifted from real production codebases:
 
 | Practice | What it covers |
 |---|---|
@@ -122,9 +122,35 @@ Plus 3 documentation standards ([`documentation/`](documentation/)) and the evol
 | [`evolution/delta-extraction.md`](evolution/delta-extraction.md) | Batch-process dreams into proposed updates. |
 | [`evolution/core-update-gate.md`](evolution/core-update-gate.md) | The bar for promoting a lesson upstream. |
 
-**Plus a stack-specific warm start.** If you are building a full-stack web app on AWS, fork [`stack-modules/full-stack-web-aws/v0.1.0/`](stack-modules/full-stack-web-aws/v0.1.0/) alongside CORE. It ships ready-made practices for AWS deploy sequencing (App Runner / Lambda / Amplify), CORS and frontend-backend wiring, IAM ordering, Python venv + conda + npm interop, UI review checklists. Knowledge you would otherwise pay for in 6 months of production incidents. Other archetypes (CLI tools, data pipelines, mobile) get scaffolded as the community contributes them.
-
 Current version: **CORE v0.1.2**, **stack/full-stack-web-aws v0.1.0**. See [`CORE.md`](CORE.md) for the full index and [`CORE-CHANGELOG.md`](CORE-CHANGELOG.md) for lineage.
+
+---
+
+## Four layers, one mechanism
+
+OpenCore is not one rulebook. It is four — each covering a different scope, all kept current by the same AI-driven loop.
+
+```
+CORE     The universal rulebook. Practices that govern HOW to work regardless
+         of stack — debugging, git, testing, session protocol, anti-patterns.
+         Never names a technology.
+
+STACK    Per-archetype wisdom. full-stack-web-aws v0.1.0 ships AWS deploy
+         sequencing (App Runner / Lambda / Amplify), CORS and frontend-backend
+         wiring, IAM ordering, Python venv + conda + npm interop, UI review
+         checklists. Other archetypes (CLI tools, data pipelines, mobile) get
+         scaffolded as the community contributes them.
+
+PROJECT  Your codebase's fork of CORE + STACK, plus everything unique to this
+         repo — your data model, runbooks, ERRATA. Grows as you ship.
+
+USER     Your personal preferences. Follows you across projects, not the
+         project across humans.
+```
+
+After each session, your agent runs a [dream](evolution/dreaming.md), looks at what changed, and proposes updates to whichever layer the lesson belongs in. Universal lessons land in CORE. AWS-specific lessons land in STACK. Repo-specific quirks land in PROJECT. Personal habits land in USER. You review what to keep — your fork, your rules.
+
+The result is comprehensive coverage without the bookkeeping. Each layer stays at the right level of abstraction because your agent already knows where each kind of lesson belongs.
 
 ---
 
