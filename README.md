@@ -74,12 +74,18 @@ Project-specific things stay in the project. Universal practices live in the for
 ## Install
 
 ```bash
-# In any project:
+# 1. Clone OpenCore alongside your project
 git clone https://github.com/sibmike/opencore.git .opencore
-echo "Read .opencore/CORE.md before doing anything." > CLAUDE.md
+
+# 2. Add this line to your CLAUDE.md (or .cursorrules / AGENTS.md /
+#    .windsurfrules — whatever your tool reads):
+#
+#       @.opencore/CORE.md
+#
+# If the file does not exist yet, create it with that one line.
 ```
 
-That is the entire setup.
+The `@` import tells Claude Code / Cursor / similar agents to pull `.opencore/CORE.md` into their reading set. Your existing CLAUDE.md content is preserved — you are adding a pointer, not replacing the file.
 
 ---
 
